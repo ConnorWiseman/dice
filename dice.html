@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Dice Roller Tool</title>
+        <meta charset="utf-8" />
+
+        <script src="mt.js"></script>
+        <script src="die.js"></script>
+        <script src="dice.js"></script>
+        <script src="diceroller.js"></script>
+        <script src="main.js"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" />
+        <link rel="stylesheet" href="dice.css" />
+    </head>
+
+    <body>
+        <h1>Dice Roller Tool</h1>
+
+        <div class="wrapper">
+            <div class="form-wrapper">
+                <form>
+                    <header>
+                        <h2><label for="current-seed">Seed</label></h2>
+                    </header>
+                    <div class="form-contents">
+                        <input type="text" id="current-seed" disabled />
+                        <button id="edit-seed">Edit</button>
+                        <button id="copy-seed">Copy</button>
+                        <button id="reset-seed">Reset</button>
+                    </div>
+                </form>
+
+                <form id="dice-roller">
+                    <header>
+                        <h2>Dice Roller</h2>
+                    </header>
+                    <div class="form-contents">
+                        <input type="number" id="number" class="small" min="0" placeholder="1" />
+                        d
+                        <input type="number" id="sides" class="small" min="1" placeholder="6" />
+                        <input type="radio" name="subtract" id="plus" value="false" />
+                        <label for="plus">+</label>
+                        /
+                        <input type="radio" name="subtract" id="minus" value="true" />
+                        <label for="minus">&ndash;</label>
+                        <input type="number" id="modifier" class="small" min="0" placeholder="0" />
+                        <button id="roll-dice">Roll</button>
+                        <label for="result">Result:</label>
+                        <input type="number" id="result" />
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="history">
+                    <header>
+                        <h2>Dice History <span id="total-rolls"></span></h2>
+                    </header>
+                    <div class="form-contents">
+                        <p>Sort
+                            <input type="radio" name="sort" value="false" id="ascending" /><label for="ascending" title="Oldest rolls at the top" class="tooltip">ascending</label>
+                            /
+                            <input type="radio" name="sort" value="true" id="descending" checked /><label for="descending" title="Newest rolls at the top" class="tooltip">descending</label>
+                        </p>
+                        <button id="clear-history">Clear</button>
+                        <ul id="dice-history">
+                            <li class="no-results">No results to display.</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

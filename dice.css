@@ -1,0 +1,154 @@
+body {
+    background-color: #171717;
+    color: #cdcbcb;
+    font-family: 'Lato', 'Arial', sans-serif;
+    line-height: 1.6;
+}
+h1 {
+    color: #cdcbcb;
+    font-weight: lighter;
+    margin: 0 auto;
+    padding: 0 3em 0;
+    text-transform: lowercase;
+}
+h2 {
+    color: #1aa8e6;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0.25em 0.5em;
+    text-transform: lowercase;
+}
+p {
+    display: inline-block;
+    margin: 0;
+}
+p + button {
+    float: right;
+}
+ul {
+    list-style: none;
+    padding: 0 2em;
+}
+ul li {
+    font-size: 0.9em;
+    font-weight: lighter;
+    padding: 0.25em 0.5em;
+}
+ul li:nth-child(odd) {
+    background-color: #222222;
+}
+ul strong {
+    color: #1aa8e6;
+    font-weight: bold;
+    border-bottom: 1px dotted #1aa8e6;
+    cursor: help;
+}
+.rolls {
+    color: #666666;
+}
+.rolls::before {
+    content: '(';
+}
+.rolls::after {
+    content: ')';
+}
+button {
+    background-color: transparent;
+    border: 1px solid #cdcbcb;
+    transition: all 0.15s ease-in;
+}
+button:hover {
+    border-color: #1aa8e6;
+    color: #1aa8e6;
+}
+input {
+    background-color: #222222;
+    border: 1px solid #666666;
+}
+input:disabled {
+    border-color: #403f3f;
+    color: #403f3f;
+}
+button, input {
+    border-radius: 0.35em;
+    box-sizing: border-box;
+    color: #cdcbcb;
+    display: inline-block;
+    height: 2.25em;
+    margin: 0;
+    padding: 0.25em 0.75em;
+    vertical-align: top;
+}
+
+
+.wrapper {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em 5em;
+}
+.form-wrapper {
+    flex: 1;
+    flex-wrap: wrap;
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+form {
+    flex: 1 100%;
+    background-color: #272626;
+    border-radius: 0.35em;
+    display: block;
+    margin: 1em;
+    overflow: hidden;
+}
+.form-wrapper form:last-child {
+    margin-bottom: 0;
+}
+form header {
+    background-color: #222222;
+    border-bottom: 1px solid #403f3f;
+}
+.form-contents {
+    padding: 1em;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+input[type='radio'] {
+    display: none;
+}
+input[type='radio'] + label {
+    cursor: pointer;
+    display: inline-block;
+}
+input[type='radio']:checked + label {
+    color: #1aa8e6;
+    font-weight: bold;
+}
+
+.small {
+    max-width: 4em;
+    text-align: center;
+}
+#result {
+    text-align: right;
+}
+
+
+#dice-history {
+    height: 7.25em;
+    overflow: auto;
+}
+
+.tooltip {
+    border-bottom: 1px dotted #1aa8e6;
+    cursor: help!important;
+}
